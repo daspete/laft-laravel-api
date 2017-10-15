@@ -1,3 +1,87 @@
+# laft-laravel-api
+
+## Requirements
+
+- PHP >= 7.1
+
+## Installation
+
+- clone this repo
+- run ``` composer install ``` in terminal
+
+### Hacky version mismatch fix for the JWT package (zizaco/entrust)
+
+This package isn't ready for laravel 5.5, but it can be fixed very quickly.
+Till the vendor package is updated, we need to fix a vendor file temporary
+
+- search for the file ``` /vendor/zizaco/entrust/src/commands/MigrationCommand.php ```
+- search for the  ``` public function fire() ```
+- rename it to ``` public function handle() ```
+
+This should be fixed soon... or we can fork the package
+
+### After this fix
+
+- run ``` php artisan migrate ```
+- run ``` php artisan  jwt:secret ```
+
+
+## Auth Routes
+
+in the ``` /routes/web.php ```
+
+you'll find the routes *authenticate* and *logout*. 
+They handle the login and logout process
+
+The route group with the prefix ``` api ``` is protected with the ability middleware, which handles the user roles and permissions
+
+
+## Frontend solution
+
+There is a package called [https://github.com/daspete/laft-frontend](laft-frontend).
+
+This package is a solution, solved with [https://nuxtjs.org/](nuxt.js), which creates SSR VueJS pages. With this packs, we can create PWAs with ease :)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 <p align="center">
