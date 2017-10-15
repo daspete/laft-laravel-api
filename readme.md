@@ -38,9 +38,9 @@ The route group with the prefix ``` api ``` is protected with the ability middle
 
 ## Frontend solution
 
-There is a package called [https://github.com/daspete/laft-frontend](laft-frontend).
+There is a package called [laft-frontend](https://github.com/daspete/laft-frontend).
 
-This package is a solution, solved with [https://nuxtjs.org/](nuxt.js), which creates SSR VueJS pages. With this packs, we can create PWAs with ease :)
+This package is a solution, solved with [nuxt.js](https://nuxtjs.org/), which creates SSR VueJS pages. With this packs, we can create PWAs with ease :)
 
 
 
